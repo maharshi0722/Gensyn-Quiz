@@ -35,7 +35,7 @@ Google Fonts (Poppins)
 
 Clone the repository
 
-git clone https://github.com/yourusername/gensyn-quiz.git
+git clone https://github.com/maharshi0722/gensyn-quiz.git
 cd gensyn-quiz
 
 Install dependencies
