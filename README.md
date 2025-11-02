@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Gensyn Quiz
 
-## Getting Started
+An interactive web quiz built with Next.js, Tailwind CSS, and React, designed to test your knowledge about Gensyn — the decentralized compute protocol for machine learning.
+It features smooth transitions, live scoring, and visual feedback for correct and incorrect answers.
 
-First, run the development server:
+🚀 Features
 
-```bash
+🎯 Multiple Choice Quiz — 10 curated questions about the Gensyn protocol
+
+🌈 Dynamic UI Feedback — Green for correct answers, red for wrong ones
+
+💫 Smooth Animations — Subtle hover, fade, and pulse effects
+
+🔁 Restart Option — Instantly retry the quiz after completion
+
+📱 Responsive Design — Optimized for both desktop and mobile
+
+🧩 Tech Stack
+
+Next.js 14+ (App Router)
+
+React 18+
+
+Tailwind CSS
+
+Google Fonts (Poppins)
+
+📂 Project Structure
+/app
+├── page.js # Main quiz logic + UI
+├── data.js # Quiz questions & answers in JSON format
+├── globals.css # Tailwind base styles
+
+⚙️ Setup Instructions
+
+Clone the repository
+
+git clone https://github.com/yourusername/gensyn-quiz.git
+cd gensyn-quiz
+
+Install dependencies
+
+npm install
+
+Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+http://localhost:3000
+🧾 Data Format (data.js)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Your data.js file should export an array of question objects:
 
-## Learn More
+export default [
+{
+question: "What is Judge in the context of the Gensyn Testnet?",
+options: [
+"A blockchain-based payment system",
+"A cryptographically verifiable runtime for reinforcement learning workloads",
+"A social platform for AI researchers",
+"A dataset repository for machine learning"
+],
+answer: 1
+},
+...
+];
+🧠 Quiz Logic Overview
 
-To learn more about Next.js, take a look at the following resources:
+Each time a user selects an answer:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The option color updates instantly:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ Green for correct
 
-## Deploy on Vercel
+❌ Red for incorrect
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+After a short delay, the quiz auto-advances to the next question.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+At the end, a summary screen displays the total score and restart option.
+
+🧑‍💻 Author
+
+Maharshi Patel
+Built with ❤️ using Next.js + Tailwind.
